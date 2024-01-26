@@ -1,5 +1,27 @@
 # PythonSQL-store_data
 
+---Libraries
+
+import config
+import pandas as pd
+import numpy as np
+import sqlalchemy as SA
+import psycopg2
+import datetime as dt
+import seaborn as sns
+import matplotlib.pyplot as plt
+from datetime import datetime
+
+---Connection
+
+conn1= SA.create_engine('postgresql+psycopg2://{u}:{p}@{h}/{d}'.format(
+    u='bhavuk@gmail.com', 
+    p='123456',
+    h='123.1.1.0:1008',
+    d='service_store_transactions'))
+
+---Run the query
+
 query="""
 
 SELECT 
